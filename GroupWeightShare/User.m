@@ -17,7 +17,7 @@
 {
     if ((self = [super init])) {
         self.isMale = NO;
-        self.birthYear = 0;
+        self.birthYear = 1992;
         self.isShared = YES;
     }
     return self;

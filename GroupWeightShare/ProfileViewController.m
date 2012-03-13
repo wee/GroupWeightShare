@@ -9,6 +9,7 @@
 #import "MainTabBarViewController.h"
 
 @interface ProfileViewController ()
+@property (nonatomic, strong) User *user;
 
 @end
 
@@ -17,6 +18,7 @@
 @synthesize maleOrFemailSegmentedControl=_maleOrFemailSegmentedControl;
 @synthesize ageTextField=_ageTextField;
 @synthesize shareSwitch=_shareSwitch;
+@synthesize user=_user;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,13 +32,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    User *user = ((MainTabBarViewController *)self.parentViewController).user;
-    if (user.isMale) {
+    self.user = ((MainTabBarViewController *)self.parentViewController).user;
+    if (self.user.isMale) {
         self.maleOrFemailSegmentedControl.selectedSegmentIndex = 0;
     } else {
         self.maleOrFemailSegmentedControl.selectedSegmentIndex = 1;
     }
-    [self.maleOrFemailSegmentedControl setNeedsDisplay];
+    self.ageTextField.text = [NSString stringWithFormat:@"%d", (2012-self.user.birthYear)];
 }
 
 - (void)viewDidUnload
@@ -56,7 +58,15 @@
 
 - (IBAction)onGenderSelected:(id)sender {
     NSLog(@"gender %d selected", self.maleOrFemailSegmentedControl.selectedSegmentIndex);
+    if (self.maleOrFemailSegmentedControl.selectedSegmentIndex == 0) {
+        self.user.isMale = true;
+    } else {
+        self.user.isMale = false;
+    }
 }
 
+- (IBAction)onAgeEntered:(id)sender {
+    self.user.birthYear = 2012 - [self.ageTextField.text intValue];
+}
 
 @end

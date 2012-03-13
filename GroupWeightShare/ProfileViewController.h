@@ -15,4 +15,5 @@
 @property (nonatomic, strong) IBOutlet UISwitch *shareSwitch;
 
 - (IBAction)onGenderSelected:(id)sender;
+- (IBAction)onAgeEntered:(id)sender;
 @end
