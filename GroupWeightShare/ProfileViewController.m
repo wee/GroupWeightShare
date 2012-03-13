@@ -6,13 +6,17 @@
 //
 
 #import "ProfileViewController.h"
+#import "MainTabBarViewController.h"
 
 @interface ProfileViewController ()
 
 @end
 
 @implementation ProfileViewController
+
+@synthesize maleOrFemailSegmentedControl=_maleOrFemailSegmentedControl;
 @synthesize ageTextField=_ageTextField;
+@synthesize shareSwitch=_shareSwitch;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +30,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    User *user = ((MainTabBarViewController *)self.parentViewController).user;
+    if (user.isMale) {
+        self.maleOrFemailSegmentedControl.selectedSegmentIndex = 0;
+    } else {
+        self.maleOrFemailSegmentedControl.selectedSegmentIndex = 1;
+    }
+    [self.maleOrFemailSegmentedControl setNeedsDisplay];
 }
 
 - (void)viewDidUnload
@@ -43,5 +53,10 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.ageTextField resignFirstResponder];
 }
+
+- (IBAction)onGenderSelected:(id)sender {
+    NSLog(@"gender %d selected", self.maleOrFemailSegmentedControl.selectedSegmentIndex);
+}
+
 
 @end

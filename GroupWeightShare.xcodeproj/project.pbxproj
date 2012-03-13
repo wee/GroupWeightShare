@@ -21,6 +21,8 @@
 		42E9568F150EFB13004CD3FA /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9568E150EFB13004CD3FA /* second.png */; };
 		42E95691150EFB13004CD3FA /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E95690150EFB13004CD3FA /* second@2x.png */; };
 		42E9569C150F16A5004CD3FA /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E9569B150F16A5004CD3FA /* ProfileViewController.m */; };
+		42E956A0150F17EA004CD3FA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E9569F150F17EA004CD3FA /* User.m */; };
+		42E956A3150F19F7004CD3FA /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E956A2150F19F7004CD3FA /* MainTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,10 @@
 		42E95690150EFB13004CD3FA /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		42E9569A150F16A5004CD3FA /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		42E9569B150F16A5004CD3FA /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		42E9569E150F17EA004CD3FA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		42E9569F150F17EA004CD3FA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		42E956A1150F19F7004CD3FA /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
+		42E956A2150F19F7004CD3FA /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 		42E95675150EFB13004CD3FA /* GroupWeightShare */ = {
 			isa = PBXGroup;
 			children = (
+				42E9569D150F17D8004CD3FA /* Models */,
 				42E9567E150EFB13004CD3FA /* AppDelegate.h */,
 				42E9567F150EFB13004CD3FA /* AppDelegate.m */,
 				42E95681150EFB13004CD3FA /* MainStoryboard.storyboard */,
@@ -105,6 +112,8 @@
 				42E95676150EFB13004CD3FA /* Supporting Files */,
 				42E9569A150F16A5004CD3FA /* ProfileViewController.h */,
 				42E9569B150F16A5004CD3FA /* ProfileViewController.m */,
+				42E956A1150F19F7004CD3FA /* MainTabBarViewController.h */,
+				42E956A2150F19F7004CD3FA /* MainTabBarViewController.m */,
 			);
 			path = GroupWeightShare;
 			sourceTree = "<group>";
@@ -118,6 +127,15 @@
 				42E9567D150EFB13004CD3FA /* GroupWeightShare-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42E9569D150F17D8004CD3FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42E9569E150F17EA004CD3FA /* User.h */,
+				42E9569F150F17EA004CD3FA /* User.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +209,8 @@
 				42E95686150EFB13004CD3FA /* FirstViewController.m in Sources */,
 				42E9568D150EFB13004CD3FA /* SecondViewController.m in Sources */,
 				42E9569C150F16A5004CD3FA /* ProfileViewController.m in Sources */,
+				42E956A0150F17EA004CD3FA /* User.m in Sources */,
+				42E956A3150F19F7004CD3FA /* MainTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

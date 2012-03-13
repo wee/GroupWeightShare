@@ -10,6 +10,9 @@
 
 @interface ProfileViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UISegmentedControl *maleOrFemailSegmentedControl;
 @property (nonatomic, strong) IBOutlet UITextField *ageTextField;
+@property (nonatomic, strong) IBOutlet UISwitch *shareSwitch;
 
+- (IBAction)onGenderSelected:(id)sender;
 @end
