@@ -9,4 +9,6 @@
 
 @interface SecondViewController : UIViewController
 
+@property (nonatomic) IBOutlet UITextField *weightTextField;
+
 @end

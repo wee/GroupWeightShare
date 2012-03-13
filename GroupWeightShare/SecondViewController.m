@@ -12,11 +12,12 @@
 @end
 
 @implementation SecondViewController
+@synthesize  weightTextField=_weightTextField;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	[self.weightTextField becomeFirstResponder];
 }
 
 - (void)viewDidUnload
@@ -30,4 +31,7 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.weightTextField resignFirstResponder];
+}
 @end

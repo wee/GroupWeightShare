@@ -20,6 +20,7 @@
 		42E9568D150EFB13004CD3FA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E9568C150EFB13004CD3FA /* SecondViewController.m */; };
 		42E9568F150EFB13004CD3FA /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9568E150EFB13004CD3FA /* second.png */; };
 		42E95691150EFB13004CD3FA /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E95690150EFB13004CD3FA /* second@2x.png */; };
+		42E9569C150F16A5004CD3FA /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E9569B150F16A5004CD3FA /* ProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		42E9568C150EFB13004CD3FA /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		42E9568E150EFB13004CD3FA /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		42E95690150EFB13004CD3FA /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		42E9569A150F16A5004CD3FA /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		42E9569B150F16A5004CD3FA /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				42E9568E150EFB13004CD3FA /* second.png */,
 				42E95690150EFB13004CD3FA /* second@2x.png */,
 				42E95676150EFB13004CD3FA /* Supporting Files */,
+				42E9569A150F16A5004CD3FA /* ProfileViewController.h */,
+				42E9569B150F16A5004CD3FA /* ProfileViewController.m */,
 			);
 			path = GroupWeightShare;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				42E95680150EFB13004CD3FA /* AppDelegate.m in Sources */,
 				42E95686150EFB13004CD3FA /* FirstViewController.m in Sources */,
 				42E9568D150EFB13004CD3FA /* SecondViewController.m in Sources */,
+				42E9569C150F16A5004CD3FA /* ProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
