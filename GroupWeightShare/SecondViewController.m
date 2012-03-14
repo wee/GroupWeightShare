@@ -17,6 +17,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.weightTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    if (([[[UIDevice currentDevice] systemVersion] doubleValue] >= 4.1)) {
+        self.weightTextField.keyboardType = UIKeyboardTypeDecimalPad;
+    }
 	[self.weightTextField becomeFirstResponder];
 }
 
