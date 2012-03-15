@@ -11,6 +11,7 @@
 @property (nonatomic, strong) UIActionSheet *actionSheet;
 - (UISegmentedControl *)createCloseButtonSegmentedControl;
 - (UISegmentedControl *)createWeightUnitButtonSegmentedControl;
+- (UIActionSheet *)createEnterWeightActionSheet;
 @end
 
 @implementation GroupTrendViewController
@@ -33,24 +34,9 @@
 }
 
 - (IBAction)onEnterWeightButton:(id)sender {
-    self.actionSheet = [[UIActionSheet alloc] initWithTitle:nil 
-                                                             delegate:nil
-                                                    cancelButtonTitle:nil
-                                               destructiveButtonTitle:nil
-                                                    otherButtonTitles:nil];
-    
-    [self.actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
-    CGRect pickerFrame = CGRectMake(0, 40, 0, 0);
-    
-    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
-    pickerView.showsSelectionIndicator = YES;
-    pickerView.dataSource = self;
-    pickerView.delegate = self;
-    
-    [self.actionSheet addSubview:pickerView];
-    [self.actionSheet addSubview:[self createCloseButtonSegmentedControl]];
-    [self.actionSheet addSubview:[self createWeightUnitButtonSegmentedControl]];
-    
+    if (self.actionSheet == nil) {
+        self.actionSheet = [self createEnterWeightActionSheet];
+    }    
     [self.actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
     [self.actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
 }
@@ -113,4 +99,24 @@
     return weightUnitSegmentedControl;
 }
 
+- (UIActionSheet *)createEnterWeightActionSheet {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil 
+                                                             delegate:nil
+                                                    cancelButtonTitle:nil
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:nil];
+    
+    [actionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+    CGRect pickerFrame = CGRectMake(0, 40, 0, 0);
+    
+    UIPickerView *pickerView = [[UIPickerView alloc] initWithFrame:pickerFrame];
+    pickerView.showsSelectionIndicator = YES;
+    pickerView.dataSource = self;
+    pickerView.delegate = self;
+    
+    [actionSheet addSubview:pickerView];
+    [actionSheet addSubview:[self createCloseButtonSegmentedControl]];
+    [actionSheet addSubview:[self createWeightUnitButtonSegmentedControl]];
+    return actionSheet;
+}
 @end
