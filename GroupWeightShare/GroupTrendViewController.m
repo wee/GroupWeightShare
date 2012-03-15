@@ -9,6 +9,8 @@
 
 @interface GroupTrendViewController ()
 @property (nonatomic, strong) UIActionSheet *actionSheet;
+- (UISegmentedControl *)createCloseButtonSegmentedControl;
+- (UISegmentedControl *)createWeightUnitButtonSegmentedControl;
 @end
 
 @implementation GroupTrendViewController
@@ -46,19 +48,10 @@
     pickerView.delegate = self;
     
     [self.actionSheet addSubview:pickerView];
-    
-    UISegmentedControl *closeButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Close"]];
-    closeButton.momentary = YES; 
-    closeButton.frame = CGRectMake(260, 7.0f, 50.0f, 30.0f);
-    closeButton.segmentedControlStyle = UISegmentedControlStyleBar;
-    closeButton.tintColor = [UIColor blackColor];
-    [closeButton addTarget:self 
-                    action:@selector(dismissActionSheet:) 
-          forControlEvents:UIControlEventValueChanged];
-    [self.actionSheet addSubview:closeButton];
+    [self.actionSheet addSubview:[self createCloseButtonSegmentedControl]];
+    [self.actionSheet addSubview:[self createWeightUnitButtonSegmentedControl]];
     
     [self.actionSheet showInView:[[UIApplication sharedApplication] keyWindow]];
-    
     [self.actionSheet setBounds:CGRectMake(0, 0, 320, 485)];
 }
 
@@ -66,6 +59,7 @@
     [self.actionSheet dismissWithClickedButtonIndex:0 animated:YES];
 }
 
+#pragma mark - Weight Picker
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 5;
 }
@@ -78,12 +72,45 @@
 
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    if (component == (NSInteger)3) {
-        return @".";
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
+    UILabel* label = (UILabel*)view;
+    if (view == nil){
+        label= [[UILabel alloc] initWithFrame:CGRectZero];
+        label.opaque = NO;
+        label.textColor = [UIColor blackColor];
+        label.backgroundColor = [UIColor clearColor];
+        label.textAlignment = UITextAlignmentCenter;
+        label.font = [UIFont boldSystemFontOfSize:22];
     }
-    return [NSString stringWithFormat:@"%d", row];
+    if (component == (NSInteger)3) {
+        label.text = @".";
+    } else {
+        label.text = [NSString stringWithFormat:@"%d", row];
+    }
+    return label;
+}
+
+#pragma mark - Action Sheet Buttons
+- (UISegmentedControl *)createCloseButtonSegmentedControl {
+    UISegmentedControl *closeSegmentedControl = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:@"Close"]];
+    closeSegmentedControl.momentary = YES; 
+    closeSegmentedControl.frame = CGRectMake(260, 7.0f, 50.0f, 30.0f);
+    closeSegmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
+    closeSegmentedControl.tintColor = [UIColor blackColor];
+    [closeSegmentedControl addTarget:self 
+                              action:@selector(dismissActionSheet:) 
+                    forControlEvents:UIControlEventValueChanged];
+    return closeSegmentedControl;
+}
+
+- (UISegmentedControl *)createWeightUnitButtonSegmentedControl {
+    NSArray *itemArray = [NSArray arrayWithObjects: @"lbs", @"kgs", nil];
+    UISegmentedControl *weightUnitSegmentedControl = [[UISegmentedControl alloc] initWithItems:itemArray];
+    weightUnitSegmentedControl.frame = CGRectMake(10, 7, 100, 30);
+    weightUnitSegmentedControl.segmentedControlStyle = UISegmentedControlStylePlain;
+    weightUnitSegmentedControl.tintColor = [UIColor blackColor];
+    weightUnitSegmentedControl.selectedSegmentIndex = 1;
+    return weightUnitSegmentedControl;
 }
 
 @end
