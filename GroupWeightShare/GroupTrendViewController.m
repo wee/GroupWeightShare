@@ -5,13 +5,13 @@
 //  Created by Weerasak Witthawaskul on 3/12/12.
 //
 
-#import "FirstViewController.h"
+#import "GroupTrendViewController.h"
 
-@interface FirstViewController ()
+@interface GroupTrendViewController ()
 @property (nonatomic, strong) UIActionSheet *actionSheet;
 @end
 
-@implementation FirstViewController
+@implementation GroupTrendViewController
 @synthesize actionSheet=_actionSheet;
 
 - (void)viewDidLoad

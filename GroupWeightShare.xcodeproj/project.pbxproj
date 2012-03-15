@@ -15,7 +15,7 @@
 		42E9567C150EFB13004CD3FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E9567B150EFB13004CD3FA /* main.m */; };
 		42E95680150EFB13004CD3FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E9567F150EFB13004CD3FA /* AppDelegate.m */; };
 		42E95683150EFB13004CD3FA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E95681150EFB13004CD3FA /* MainStoryboard.storyboard */; };
-		42E95686150EFB13004CD3FA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E95685150EFB13004CD3FA /* FirstViewController.m */; };
+		42E95686150EFB13004CD3FA /* GroupTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E95685150EFB13004CD3FA /* GroupTrendViewController.m */; };
 		42E95688150EFB13004CD3FA /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E95687150EFB13004CD3FA /* first.png */; };
 		42E9568A150EFB13004CD3FA /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E95689150EFB13004CD3FA /* first@2x.png */; };
 		42E9568D150EFB13004CD3FA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E9568C150EFB13004CD3FA /* SecondViewController.m */; };
@@ -39,8 +39,8 @@
 		42E9567E150EFB13004CD3FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		42E9567F150EFB13004CD3FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		42E95682150EFB13004CD3FA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		42E95684150EFB13004CD3FA /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		42E95685150EFB13004CD3FA /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		42E95684150EFB13004CD3FA /* GroupTrendViewController.h */ = {isa = PBXFileReference; path = GroupTrendViewController.h; sourceTree = "<group>"; };
+		42E95685150EFB13004CD3FA /* GroupTrendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupTrendViewController.m; sourceTree = "<group>"; };
 		42E95687150EFB13004CD3FA /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		42E95689150EFB13004CD3FA /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		42E9568B150EFB13004CD3FA /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 				42E9567E150EFB13004CD3FA /* AppDelegate.h */,
 				42E9567F150EFB13004CD3FA /* AppDelegate.m */,
 				42E95681150EFB13004CD3FA /* MainStoryboard.storyboard */,
-				42E95684150EFB13004CD3FA /* FirstViewController.h */,
-				42E95685150EFB13004CD3FA /* FirstViewController.m */,
+				42E95684150EFB13004CD3FA /* GroupTrendViewController.h */,
+				42E95685150EFB13004CD3FA /* GroupTrendViewController.m */,
 				42E95687150EFB13004CD3FA /* first.png */,
 				42E95689150EFB13004CD3FA /* first@2x.png */,
 				42E9568B150EFB13004CD3FA /* SecondViewController.h */,
@@ -218,7 +218,7 @@
 			files = (
 				42E9567C150EFB13004CD3FA /* main.m in Sources */,
 				42E95680150EFB13004CD3FA /* AppDelegate.m in Sources */,
-				42E95686150EFB13004CD3FA /* FirstViewController.m in Sources */,
+				42E95686150EFB13004CD3FA /* GroupTrendViewController.m in Sources */,
 				42E9568D150EFB13004CD3FA /* SecondViewController.m in Sources */,
 				42E9569C150F16A5004CD3FA /* ProfileViewController.m in Sources */,
 				42E956A0150F17EA004CD3FA /* User.m in Sources */,
