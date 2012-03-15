@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42BEC3521511925D003AD1C9 /* wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42BEC3511511925D003AD1C9 /* wallpaper.jpg */; };
 		42E95670150EFB13004CD3FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E9566F150EFB13004CD3FA /* UIKit.framework */; };
 		42E95672150EFB13004CD3FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E95671150EFB13004CD3FA /* Foundation.framework */; };
 		42E95674150EFB13004CD3FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E95673150EFB13004CD3FA /* CoreGraphics.framework */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42BEC3511511925D003AD1C9 /* wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wallpaper.jpg; path = Resources/wallpaper.jpg; sourceTree = "<group>"; };
 		42E9566B150EFB13004CD3FA /* GroupWeightShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupWeightShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E9566F150EFB13004CD3FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42E95671150EFB13004CD3FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42BEC34F1511924B003AD1C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				42BEC3511511925D003AD1C9 /* wallpaper.jpg */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		42E95660150EFB13004CD3FA = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 		42E95675150EFB13004CD3FA /* GroupWeightShare */ = {
 			isa = PBXGroup;
 			children = (
+				42BEC34F1511924B003AD1C9 /* Resources */,
 				42E9569D150F17D8004CD3FA /* Models */,
 				42E9567E150EFB13004CD3FA /* AppDelegate.h */,
 				42E9567F150EFB13004CD3FA /* AppDelegate.m */,
@@ -194,6 +205,7 @@
 				42E9568A150EFB13004CD3FA /* first@2x.png in Resources */,
 				42E9568F150EFB13004CD3FA /* second.png in Resources */,
 				42E95691150EFB13004CD3FA /* second@2x.png in Resources */,
+				42BEC3521511925D003AD1C9 /* wallpaper.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +334,7 @@
 				42E95696150EFB13004CD3FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

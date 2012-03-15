@@ -32,6 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     self.user = ((MainTabBarViewController *)self.parentViewController).user;
     if (self.user.isMale) {
         self.maleOrFemailSegmentedControl.selectedSegmentIndex = 0;

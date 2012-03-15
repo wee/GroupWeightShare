@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+
+- (IBAction)onEnterWeightButton:(id)sender;
 
 @end

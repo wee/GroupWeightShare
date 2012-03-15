@@ -27,6 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"wallpaper.jpg"]];
+    self.view.backgroundColor = background;
+
     self.user = [[User alloc] init];
     NSLog(@"user = %@", self.user);
 }
