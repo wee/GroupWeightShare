@@ -25,6 +25,7 @@
 		42E956A3150F19F7004CD3FA /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E956A2150F19F7004CD3FA /* MainTabBarViewController.m */; };
 		42EFFDCE1513D80100F82E03 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42EFFDCD1513D80100F82E03 /* libCorePlot-CocoaTouch.a */; };
 		42EFFDD01513D84800F82E03 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42EFFDCF1513D84800F82E03 /* QuartzCore.framework */; };
+		42EFFDD31513DD8500F82E03 /* WeightChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EFFDD21513DD8500F82E03 /* WeightChartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +134,8 @@
 		42EFFDCC1513D7B600F82E03 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		42EFFDCD1513D80100F82E03 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		42EFFDCF1513D84800F82E03 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		42EFFDD11513DD8500F82E03 /* WeightChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightChartViewController.h; sourceTree = "<group>"; };
+		42EFFDD21513DD8500F82E03 /* WeightChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightChartViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +211,8 @@
 				42E9569B150F16A5004CD3FA /* ProfileViewController.m */,
 				42E956A1150F19F7004CD3FA /* MainTabBarViewController.h */,
 				42E956A2150F19F7004CD3FA /* MainTabBarViewController.m */,
+				42EFFDD11513DD8500F82E03 /* WeightChartViewController.h */,
+				42EFFDD21513DD8500F82E03 /* WeightChartViewController.m */,
 			);
 			path = GroupWeightShare;
 			sourceTree = "<group>";
@@ -391,6 +396,7 @@
 				42E9569C150F16A5004CD3FA /* ProfileViewController.m in Sources */,
 				42E956A0150F17EA004CD3FA /* User.m in Sources */,
 				42E956A3150F19F7004CD3FA /* MainTabBarViewController.m in Sources */,
+				42EFFDD31513DD8500F82E03 /* WeightChartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
