@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CPTPlot.h"
+#import "User.h"
 
 @interface WeightChartViewController : UIViewController<CPTPlotDataSource>
 
 @property (nonatomic, strong) IBOutlet UIView *chartView;
-
+@property (nonatomic, strong) User *user;
 @end

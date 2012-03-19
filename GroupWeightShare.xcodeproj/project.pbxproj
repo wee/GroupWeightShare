@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42BA8B5E15164D22009231A2 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BA8B5D15164D22009231A2 /* Entry.m */; };
+		42BA8B6515169F18009231A2 /* WeightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BA8B6415169F18009231A2 /* WeightTableViewController.m */; };
 		42BEC3521511925D003AD1C9 /* wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42BEC3511511925D003AD1C9 /* wallpaper.jpg */; };
 		42E95670150EFB13004CD3FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E9566F150EFB13004CD3FA /* UIKit.framework */; };
 		42E95672150EFB13004CD3FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E95671150EFB13004CD3FA /* Foundation.framework */; };
@@ -29,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42BA8B5C15164D22009231A2 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		42BA8B5D15164D22009231A2 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		42BA8B6315169F18009231A2 /* WeightTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightTableViewController.h; sourceTree = "<group>"; };
+		42BA8B6415169F18009231A2 /* WeightTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightTableViewController.m; sourceTree = "<group>"; };
 		42BEC3511511925D003AD1C9 /* wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wallpaper.jpg; path = Resources/wallpaper.jpg; sourceTree = "<group>"; };
 		42E9566B150EFB13004CD3FA /* GroupWeightShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupWeightShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E9566F150EFB13004CD3FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -213,6 +219,8 @@
 				42E956A2150F19F7004CD3FA /* MainTabBarViewController.m */,
 				42EFFDD11513DD8500F82E03 /* WeightChartViewController.h */,
 				42EFFDD21513DD8500F82E03 /* WeightChartViewController.m */,
+				42BA8B6315169F18009231A2 /* WeightTableViewController.h */,
+				42BA8B6415169F18009231A2 /* WeightTableViewController.m */,
 			);
 			path = GroupWeightShare;
 			sourceTree = "<group>";
@@ -233,6 +241,8 @@
 			children = (
 				42E9569E150F17EA004CD3FA /* User.h */,
 				42E9569F150F17EA004CD3FA /* User.m */,
+				42BA8B5C15164D22009231A2 /* Entry.h */,
+				42BA8B5D15164D22009231A2 /* Entry.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -397,6 +407,8 @@
 				42E956A0150F17EA004CD3FA /* User.m in Sources */,
 				42E956A3150F19F7004CD3FA /* MainTabBarViewController.m in Sources */,
 				42EFFDD31513DD8500F82E03 /* WeightChartViewController.m in Sources */,
+				42BA8B5E15164D22009231A2 /* Entry.m in Sources */,
+				42BA8B6515169F18009231A2 /* WeightTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

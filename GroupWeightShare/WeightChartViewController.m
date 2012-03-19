@@ -7,6 +7,7 @@
 //
 
 #import "WeightChartViewController.h"
+#import "MainTabBarViewController.h"
 #import "CPTGraphHostingView.h"
 #import "CPTXYGraph.h"
 #import "CPTScatterPlot.h"
@@ -17,14 +18,17 @@
 #import "CPTMutableLineStyle.h"
 #import "CPTColor.h"
 #import "CPTXYAxis.h"
+#import "CPTFill.h"
+#import "CPTPlotAreaFrame.h"
 
 @interface WeightChartViewController ()
-
+- (void)setUpGraph;
 @end
 
 @implementation WeightChartViewController
 
 @synthesize chartView=_chartView;
+@synthesize user=_user;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,9 +42,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    CPTGraphHostingView *hostingView = [[CPTGraphHostingView alloc] initWithFrame:self.chartView.bounds];
-    [self.chartView addSubview:hostingView];
+    self.user = ((MainTabBarViewController *)self.parentViewController).user;
 
+    [self setUpGraph];
+
+}
+
+- (void)setUpGraph {
+    CPTGraphHostingView *hostingView = [[CPTGraphHostingView alloc] initWithFrame:self.chartView.bounds];
+    hostingView.backgroundColor = [UIColor clearColor];
+    [self.chartView addSubview:hostingView];
+    self.chartView.backgroundColor = [UIColor whiteColor];
+    self.chartView.alpha = 0.5;
+    
     CPTXYGraph *graph = [[CPTXYGraph alloc] initWithFrame:self.chartView.bounds];
     hostingView.hostedGraph = graph;
     CPTTheme *theme = [CPTTheme themeNamed:kCPTPlainWhiteTheme];
@@ -50,11 +64,14 @@
     graph.paddingRight  = 15.0;
     graph.paddingBottom = 40.0;
     
+    graph.fill = [CPTFill fillWithColor:[CPTColor clearColor]];
+    graph.plotAreaFrame.fill = [CPTFill fillWithColor:[CPTColor clearColor]];
+    
     CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)graph.defaultPlotSpace;
-    plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0)
-                                                    length:CPTDecimalFromFloat(5)];
-    plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(-5)
-                                                    length:CPTDecimalFromFloat(10)];
+//    plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromDouble([[self.user earliestWeightRecordDate] timeIntervalSince1970])
+//                                                    length:CPTDecimalFromDouble([[self.user lastWeightRecordDate] timeIntervalSince1970])];
+    plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat([[self.user minimumWeight] floatValue])
+                                                    length:CPTDecimalFromFloat([[self.user maximumWeight] floatValue] - [[self.user minimumWeight] floatValue])];
     
     CPTXYAxisSet *axisSet = (CPTXYAxisSet *)graph.axisSet;
     
@@ -86,7 +103,7 @@
     //y.orthogonalCoordinateDecimal = CPTDecimalFromInteger(-0.5);
     //y.preferredNumberOfMajorTicks = 8;
     y.plotSpace = plotSpace;
-
+    
     
     [graph addPlotSpace:plotSpace];    
     
@@ -98,16 +115,14 @@
     lineStyle.lineWidth              = 3.0f;
     lineStyle.lineColor              = [CPTColor blueColor];
     dataSourceLinePlot.dataLineStyle = lineStyle;
-
-    [graph addPlot:dataSourceLinePlot];
     
-
+    [graph addPlot:dataSourceLinePlot];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    self.user = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -117,11 +132,15 @@
 
 #pragma mark - Plot Datasource
 -(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot {
-    return 5;
+    return [self.user numberOfEntries];
 }
 
 -(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index {
-    return [NSNumber numberWithInteger:index];
+    if (fieldEnum == CPTScatterPlotFieldX) {
+        return [self.user dateAsSecondsSince1970ForEntry:index];
+    } else {
+        return [self.user weightForEntry:index];
+    }
 }
 
 @end

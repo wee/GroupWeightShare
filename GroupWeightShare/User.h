@@ -12,5 +12,14 @@
 @property (nonatomic, assign) BOOL isMale;
 @property (nonatomic, assign) NSUInteger birthYear;
 @property (nonatomic, assign) BOOL isShared;
+@property (nonatomic, strong) NSArray *entries;
+
+- (NSUInteger)numberOfEntries;
+- (NSNumber *)dateAsSecondsSince1970ForEntry:(NSUInteger)index;
+- (NSNumber *)weightForEntry:(NSUInteger)index;
+- (NSNumber *)minimumWeight;
+- (NSNumber *)maximumWeight;
+- (NSDate *)earliestWeightRecordDate;
+- (NSDate *)lastWeightRecordDate;
 
 @end
