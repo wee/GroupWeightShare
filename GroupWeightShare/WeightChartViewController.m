@@ -20,6 +20,7 @@
 #import "CPTXYAxis.h"
 #import "CPTFill.h"
 #import "CPTPlotAreaFrame.h"
+#import "CPTTimeFormatter.h"
 
 @interface WeightChartViewController ()
 - (void)setUpGraph;
@@ -68,13 +69,16 @@
     graph.plotAreaFrame.fill = [CPTFill fillWithColor:[CPTColor clearColor]];
     
     CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)graph.defaultPlotSpace;
-//    plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromDouble([[self.user earliestWeightRecordDate] timeIntervalSince1970])
-//                                                    length:CPTDecimalFromDouble([[self.user lastWeightRecordDate] timeIntervalSince1970])];
-    plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat([[self.user minimumWeight] floatValue])
-                                                    length:CPTDecimalFromFloat([[self.user maximumWeight] floatValue] - [[self.user minimumWeight] floatValue])];
+    NSTimeInterval xMin = [[self.user earliestWeightRecordDate] timeIntervalSinceReferenceDate];
+    NSTimeInterval xMax = [[self.user lastWeightRecordDate] timeIntervalSinceReferenceDate];
+    plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromDouble(xMin)
+                                                    length:CPTDecimalFromDouble(xMax - xMin)];
+    float yMin = [[self.user minimumWeight] floatValue];
+    float yMax = [[self.user maximumWeight] floatValue];
+    plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(yMin)
+                                                    length:CPTDecimalFromFloat(yMax - yMin)];
     
     CPTXYAxisSet *axisSet = (CPTXYAxisSet *)graph.axisSet;
-    
     
     CPTMutableLineStyle *majorGridLineStyle = [CPTMutableLineStyle lineStyle];
     majorGridLineStyle.lineWidth = 1.0f;
@@ -86,7 +90,7 @@
     
     
     CPTXYAxis *x = axisSet.xAxis;
-    x.title = @"X axis";
+    x.title = @"Date";
     x.titleOffset = -20.0f;
     x.titleLocation = CPTDecimalFromFloat(30.0f);
     x.majorGridLineStyle = majorGridLineStyle;
@@ -95,6 +99,15 @@
     x.majorIntervalLength = CPTDecimalFromInteger(1);
     x.minorTicksPerInterval = 0.5;
     x.plotSpace = plotSpace;       
+    x.labelRotation = M_PI/4;
+    x.labelingPolicy = CPTAxisLabelingPolicyNone;
+    
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	dateFormatter.dateStyle = kCFDateFormatterShortStyle;
+	CPTTimeFormatter *timeFormatter = [[CPTTimeFormatter alloc] initWithDateFormatter:dateFormatter];
+	timeFormatter.referenceDate = [self.user earliestWeightRecordDate];
+	x.labelFormatter			= timeFormatter;
+    
     
     
     CPTXYAxis *y = axisSet.yAxis;
@@ -137,7 +150,8 @@
 
 -(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index {
     if (fieldEnum == CPTScatterPlotFieldX) {
-        return [self.user dateAsSecondsSince1970ForEntry:index];
+        return [self.user dateAsSecondsSinceReferenceDateForEntry:index];
+//        return [NSNumber numberWithInteger:index];
     } else {
         return [self.user weightForEntry:index];
     }

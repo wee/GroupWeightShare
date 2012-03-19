@@ -35,21 +35,25 @@
     return self.entries.count;
 }
 
-- (NSNumber *)dateAsSecondsSince1970ForEntry:(NSUInteger)index {
+- (NSNumber *)dateAsSecondsSinceReferenceDateForEntry:(NSUInteger)index {
     NSDate *date = ((Entry *)[self.entries objectAtIndex:index]).date;
-    return [NSNumber numberWithDouble:[date timeIntervalSince1970]];
+    return [NSNumber numberWithDouble:[date timeIntervalSinceReferenceDate]];
 }
 
 - (NSDate *)earliestWeightRecordDate {
     NSDate *date = nil;
     for (int i = 0; i < self.entries.count; i++ ) {
         Entry *entry = (Entry *)[self.entries objectAtIndex:i];
+        NSLog(@"date %@", entry.date);
+
         if (date == nil) {
             date = entry.date;
         } else {
             date = [entry.date earlierDate:date];
         }
     }
+    NSLog(@"earliest date %@", date);
+
     return date;
 }
 
@@ -63,6 +67,7 @@
             date = [entry.date laterDate:date];
         }
     }
+    NSLog(@"last date %@", date);
     return date;
 }
 
@@ -71,7 +76,7 @@
     
     for (int i = 0; i < self.entries.count; i++) {
         NSNumber *weight = ((Entry *)[self.entries objectAtIndex:i]).weight;
-        if (minWeight > weight) {
+        if ([minWeight compare:weight] == NSOrderedDescending) {
             minWeight = weight;
         }
     }
@@ -84,7 +89,7 @@
     
     for (int i = 0; i < self.entries.count; i++) {
         NSNumber *weight = ((Entry *)[self.entries objectAtIndex:i]).weight;
-        if (maxWeight < weight) {
+        if ([maxWeight compare:weight] == NSOrderedAscending) {
             maxWeight = weight;
         }
     }

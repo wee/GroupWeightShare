@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSArray *entries;
 
 - (NSUInteger)numberOfEntries;
-- (NSNumber *)dateAsSecondsSince1970ForEntry:(NSUInteger)index;
+- (NSNumber *)dateAsSecondsSinceReferenceDateForEntry:(NSUInteger)index;
 - (NSNumber *)weightForEntry:(NSUInteger)index;
 - (NSNumber *)minimumWeight;
 - (NSNumber *)maximumWeight;
