@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #import "User.h"
 #import "Entry.h"
-#define ONE_DAY_AGO (60 * 60 * 24)
+#define ONE_DAY_IN_SECONDS (60 * 60 * 24)
 
 @interface User() 
 - (void)assignSampleEntries;
@@ -105,13 +105,15 @@
     NSDate *now = [NSDate date];
     double weight = 180.0;
     NSMutableArray *entries = [NSMutableArray array];
+    NSTimeInterval interval = 0;
     for (int i = 1; i <= 10; i++) {
-        Entry *entry = [Entry entryWithDate:[NSDate dateWithTimeInterval:(ONE_DAY_AGO * i) sinceDate:now]
+        Entry *entry = [Entry entryWithDate:[NSDate dateWithTimeInterval:interval sinceDate:now]
                                      weight:[NSNumber numberWithDouble:weight]];
         [entries addObject:entry];
+        interval += ONE_DAY_IN_SECONDS * (1 + arc4random() % 2);
         weight -= (arc4random() % 10) / 10.0;
     }
     
-    self.entries = entries;
+    self.entries = [[entries reverseObjectEnumerator] allObjects];
 }
 @end
