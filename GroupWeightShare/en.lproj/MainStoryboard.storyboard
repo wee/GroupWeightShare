@@ -142,7 +142,7 @@
                             </segmentedControl>
                         </subviews>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="4.png" id="BiU-1K-mHL"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="4.png" id="BiU-1K-mHL" userLabel="ProfileTabBarItem"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ageTextField" destination="Erp-rs-aey" id="g0Q-np-LV5"/>
