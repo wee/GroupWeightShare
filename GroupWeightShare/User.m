@@ -44,8 +44,6 @@
     NSDate *date = nil;
     for (int i = 0; i < self.entries.count; i++ ) {
         Entry *entry = (Entry *)[self.entries objectAtIndex:i];
-        NSLog(@"date %@", entry.date);
-
         if (date == nil) {
             date = entry.date;
         } else {

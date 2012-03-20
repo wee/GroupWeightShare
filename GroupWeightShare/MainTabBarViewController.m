@@ -31,7 +31,6 @@
     self.view.backgroundColor = background;
 
     self.user = [[User alloc] init];
-    NSLog(@"user = %@", self.user);
 }
 
 - (void)viewDidUnload
