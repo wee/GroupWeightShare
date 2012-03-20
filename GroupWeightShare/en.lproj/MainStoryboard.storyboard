@@ -40,7 +40,7 @@
                             </button>
                         </subviews>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Group Trend" image="first" id="7"/>
+                    <tabBarItem key="tabBarItem" title="Group Trend" image="1.png" id="7"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="235" y="220"/>
@@ -69,7 +69,7 @@
                             </view>
                         </subviews>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Chart" id="7kQ-re-dEd"/>
+                    <tabBarItem key="tabBarItem" title="Chart" image="2.png" id="7kQ-re-dEd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="chartView" destination="hST-LB-gPF" id="4Tq-Kn-FWb"/>
@@ -142,7 +142,7 @@
                             </segmentedControl>
                         </subviews>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="BiU-1K-mHL"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="4.png" id="BiU-1K-mHL"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ageTextField" destination="Erp-rs-aey" id="g0Q-np-LV5"/>
@@ -201,7 +201,7 @@
                             </tableView>
                         </subviews>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Table" id="mlN-NZ-Un6"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="3.png" id="mlN-NZ-Un6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="bLq-5n-rTc" id="C1t-HC-Cks"/>
@@ -233,7 +233,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="16" height="16"/>
+        <image name="1.png" width="30" height="30"/>
+        <image name="2.png" width="30" height="30"/>
+        <image name="3.png" width="30" height="30"/>
+        <image name="4.png" width="30" height="30"/>
     </resources>
     <classes>
         <class className="GroupTrendViewController" superclassName="UIViewController">

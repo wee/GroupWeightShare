@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E2EE738151839AF00FBBB44 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2EE734151839AF00FBBB44 /* 1.png */; };
+		3E2EE739151839AF00FBBB44 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2EE735151839AF00FBBB44 /* 2.png */; };
+		3E2EE73A151839AF00FBBB44 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2EE736151839AF00FBBB44 /* 3.png */; };
+		3E2EE73B151839AF00FBBB44 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2EE737151839AF00FBBB44 /* 4.png */; };
 		42569E5A1516F9C6009834B0 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42569E591516F9C6009834B0 /* libCorePlot-CocoaTouch.a */; };
 		42BA8B5E15164D22009231A2 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BA8B5D15164D22009231A2 /* Entry.m */; };
 		42BA8B6515169F18009231A2 /* WeightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BA8B6415169F18009231A2 /* WeightTableViewController.m */; };
@@ -31,6 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E2EE734151839AF00FBBB44 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		3E2EE735151839AF00FBBB44 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		3E2EE736151839AF00FBBB44 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		3E2EE737151839AF00FBBB44 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		42569E0A1516F9C6009834B0 /* _CPTConstraintsFixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CPTConstraintsFixed.h; sourceTree = "<group>"; };
 		42569E0B1516F9C6009834B0 /* _CPTConstraintsRelative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CPTConstraintsRelative.h; sourceTree = "<group>"; };
 		42569E0C1516F9C6009834B0 /* _CPTDarkGradientTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CPTDarkGradientTheme.h; sourceTree = "<group>"; };
@@ -298,6 +306,10 @@
 				42E95689150EFB13004CD3FA /* first@2x.png */,
 				42E9568E150EFB13004CD3FA /* second.png */,
 				42E95690150EFB13004CD3FA /* second@2x.png */,
+				3E2EE734151839AF00FBBB44 /* 1.png */,
+				3E2EE735151839AF00FBBB44 /* 2.png */,
+				3E2EE736151839AF00FBBB44 /* 3.png */,
+				3E2EE737151839AF00FBBB44 /* 4.png */,
 				42E95676150EFB13004CD3FA /* Supporting Files */,
 				42E9569A150F16A5004CD3FA /* ProfileViewController.h */,
 				42E9569B150F16A5004CD3FA /* ProfileViewController.m */,
@@ -390,6 +402,10 @@
 				42E9568F150EFB13004CD3FA /* second.png in Resources */,
 				42E95691150EFB13004CD3FA /* second@2x.png in Resources */,
 				42BEC3521511925D003AD1C9 /* wallpaper.jpg in Resources */,
+				3E2EE738151839AF00FBBB44 /* 1.png in Resources */,
+				3E2EE739151839AF00FBBB44 /* 2.png in Resources */,
+				3E2EE73A151839AF00FBBB44 /* 3.png in Resources */,
+				3E2EE73B151839AF00FBBB44 /* 4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
