@@ -23,10 +23,6 @@
 		42E95680150EFB13004CD3FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E9567F150EFB13004CD3FA /* AppDelegate.m */; };
 		42E95683150EFB13004CD3FA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42E95681150EFB13004CD3FA /* MainStoryboard.storyboard */; };
 		42E95686150EFB13004CD3FA /* GroupTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E95685150EFB13004CD3FA /* GroupTrendViewController.m */; };
-		42E95688150EFB13004CD3FA /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E95687150EFB13004CD3FA /* first.png */; };
-		42E9568A150EFB13004CD3FA /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E95689150EFB13004CD3FA /* first@2x.png */; };
-		42E9568F150EFB13004CD3FA /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E9568E150EFB13004CD3FA /* second.png */; };
-		42E95691150EFB13004CD3FA /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42E95690150EFB13004CD3FA /* second@2x.png */; };
 		42E9569C150F16A5004CD3FA /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E9569B150F16A5004CD3FA /* ProfileViewController.m */; };
 		42E956A0150F17EA004CD3FA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E9569F150F17EA004CD3FA /* User.m */; };
 		42E956A3150F19F7004CD3FA /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E956A2150F19F7004CD3FA /* MainTabBarViewController.m */; };
@@ -137,10 +133,6 @@
 		42E95682150EFB13004CD3FA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		42E95684150EFB13004CD3FA /* GroupTrendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupTrendViewController.h; sourceTree = "<group>"; };
 		42E95685150EFB13004CD3FA /* GroupTrendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupTrendViewController.m; sourceTree = "<group>"; };
-		42E95687150EFB13004CD3FA /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		42E95689150EFB13004CD3FA /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		42E9568E150EFB13004CD3FA /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		42E95690150EFB13004CD3FA /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		42E9569A150F16A5004CD3FA /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		42E9569B150F16A5004CD3FA /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		42E9569E150F17EA004CD3FA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -302,10 +294,6 @@
 				42E95681150EFB13004CD3FA /* MainStoryboard.storyboard */,
 				42E95684150EFB13004CD3FA /* GroupTrendViewController.h */,
 				42E95685150EFB13004CD3FA /* GroupTrendViewController.m */,
-				42E95687150EFB13004CD3FA /* first.png */,
-				42E95689150EFB13004CD3FA /* first@2x.png */,
-				42E9568E150EFB13004CD3FA /* second.png */,
-				42E95690150EFB13004CD3FA /* second@2x.png */,
 				3E2EE734151839AF00FBBB44 /* 1.png */,
 				3E2EE735151839AF00FBBB44 /* 2.png */,
 				3E2EE736151839AF00FBBB44 /* 3.png */,
@@ -397,10 +385,6 @@
 			files = (
 				42E9567A150EFB13004CD3FA /* InfoPlist.strings in Resources */,
 				42E95683150EFB13004CD3FA /* MainStoryboard.storyboard in Resources */,
-				42E95688150EFB13004CD3FA /* first.png in Resources */,
-				42E9568A150EFB13004CD3FA /* first@2x.png in Resources */,
-				42E9568F150EFB13004CD3FA /* second.png in Resources */,
-				42E95691150EFB13004CD3FA /* second@2x.png in Resources */,
 				42BEC3521511925D003AD1C9 /* wallpaper.jpg in Resources */,
 				3E2EE738151839AF00FBBB44 /* 1.png in Resources */,
 				3E2EE739151839AF00FBBB44 /* 2.png in Resources */,
